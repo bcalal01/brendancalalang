@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Brendan Calalang</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.js"></script>
+    <meta charset="utf-8" />
+    <style>
+        canvas {
+            display: block;
+            position: fixed;
+            z-index: -2;
+            top: 50%;
+            left: 50%;
+            transform: translate( -50%, -50% );
+            opacity: 1;
+            transition: opacity 2s;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: monospace;
+        }
+
+        #container {
+            width: fit-content;
+            margin: auto;
+        }
+
+        #about {
+            width: 900px;
+            margin: auto;
+        }
+
+        #gallery {
+            flex-direction: column;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center; 
+            align-items: flex-start;
+            height: fit-content;
+            margin: 50px 0px;
+        }
+
+        .project {
+            width: 400px;
+            text-align: center;
+            margin: 0px 40px;
+            border: solid 2px #000000;
+            height: 530px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            transition: border .2s;
+            box-shadow: 5px 5px;
+        }
+
+        .project img {
+            width: 300px;
+            border: solid 1px #000000;
+        }
+
+        .project p {
+            margin: 10px;
+            text-align: left;
+        }
+
+        .project a {
+            border: solid 1px #000000;
+            padding: 5px;
+            text-decoration: none;
+            color: #000000;
+            border-radius: 5px;
+            margin: 5px;
+            transition: all .2s;
+        }
+
+        .project a:hover {
+            background-color: #bfdadd;
+        }
+
+        .buttons {
+            margin: 20px;
+        }
+
+
+        #about a img {
+            width: 50px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        #about a img:hover {
+            transform: rotate(360deg);
+            
+        }
+
+        #about {
+            font-size: 20px;
+            border: solid 3px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 10px 10px;
+            display: flex;
+            gap: 30px;
+            margin-top: 20dvh;
+            margin-bottom: 40dvh;
+        }
+
+        #about p {
+            display: inline-block;
+            margin: 0px;
+        }
+
+        #me {
+            display: none;
+            border: solid 2px;
+            width: 200px;
+        }
+
+        #offbutton {
+            all: unset;
+            width: fit-content;
+            margin: 20px;
+            border-radius: 5px;
+            border: solid 1px;
+            padding: 5px;
+            float: right;
+            transition: all .2s;
+            background-color: #ffffff;
+        }
+
+        #offbutton:hover {
+            background-color: #bfdadd;
+        }
+
+    </style>
+  </head>
+  <body>
+    <main>
+        <button id="offbutton">
+            Turn off floating head
+        </button>
+        <br clear="all">
+        <div id="container">
+            <div id="about">
+                <!-- This is a comment -->
+                <img id="me" src="images/linkedin.png">
+                <p>
+                    Hi! My name is Brendan Calalang and I am a student at Tufts Unviersity pursuing a 
+                    BS in Computer Science and BFA in Studio Art. My interests lie at the intersection of art and
+                    technology, especially in animation, web art, and game design. This website, which I made myself, 
+                    contains a collection of personal and academic projects I've worked on. Scroll down to see them.
+                    <br>
+                    <br>
+                    <a href="https://www.linkedin.com/in/brendan-calalang-72915a1a3/" target="_blank">
+                        <img src="images/logo.png">
+                    </a>
+                </p>
+            </div>
+            <div id="gallery">
+                <div class="row">
+                    <div class="project">
+                        <h2>Barry Callahan</h2>
+                        <img src="images/fearland.jpg">
+                        <p>
+                            Website based on Wikipedia in which the user explores the 
+                            workings of a future world and a disappeared man. Inspired by the idea of a 
+                            modern palimpsest--recursive layers of digital information piled on top of each other.
+                            <br>
+                            <br>
+                            HTML, CSS, JavaScript
+                        </p>
+                        <div class="buttons">
+                            <a href="https://github.com/bcalal01/Portfolio/tree/main/BarryCallahan" target="_blank">Source Code</a>
+                            <a href="https://bcalal01.github.io/Portfolio/BarryCallahan/" target="_blank">Visit the Website</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h2>HOHL'S</h2>
+                        <img src="images/hohls.jpg">
+                        <p>
+                            Animation made entirely in ASCII art about the monotony of the modern condition in 
+                            the microcosm of retail. Inspired by a summer working at Kohl's.
+                            <br>
+                            <br>
+                            C++
+                        </p>
+                        <div class="buttons">
+                            <a href="https://github.com/bcalal01/Portfolio/tree/main/HOHLS" target="_blank">Source Code</a>
+                            <a href="https://www.youtube.com/watch?v=53Z_Kgr7RxA" target="_blank">Watch the Film</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h2>Cyberbean</h2>
+                        <img src="images/cyberbean.jpg">
+                        <p>
+                            Animation made entirely in ASCII art inspired by David Hilbert's infinite hotel thought
+                            experiment and the excruciating agony of awkward conversation.
+                            <br>
+                            <br>
+                            C++
+                        </p>
+                        <div class="buttons">
+                            <a href="https://www.youtube.com/watch?v=uz2V26Fsbic" target="_blank">Watch the Film</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="project">
+                        <h2>Not Busy at All</h2>
+                        <img src="images/busy.jpg">
+                        <p>
+                            Website exploring the repetitive, droning monotony of a front-facing job. Inspired by my time as 
+                            a course assistant in the computer science department.
+                            <br>
+                            <br>
+                            HTML, CSS, JavaScript
+                        </p>
+                        <div class="buttons">
+                            <a href="https://bcalal01.github.io/bcalcium270/proj_2/" target="_blank">Visit the Website</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h2>Internet Citizen</h2>
+                        <img src="images/internet.jpg">
+                        <p>
+                            Website that guides the user into making seemingly arbitrary and irrevocable decisions, serving
+                            as a reflection for the mediated and oftentimes incomprehensible state of the internet today.
+                            <br>
+                            <br>
+                            HTML, CSS, JavaScript
+                        </p>
+                        <div class="buttons">
+                            <a href="https://bcalal01.github.io/bcalcium270/proj_3/" target="_blank">Visit the Website</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h2>Businessman Simulator</h2>
+                        <img src="images/businessman.jpg">
+                        <p>
+                            Tamogatchi-esque web game in which the player controls Barry the Businessman; 
+                            the player must help Barry send emails and take care of himself, balancing 
+                            different needs to keep Barry alive and employed.
+                            <br>
+                            <br>
+                            HTML, CSS, JavaScript
+                        </p>
+                        <div class="buttons">
+                            <a href="https://github.com/bcalal01/Portfolio/tree/main/BusinessmanSimulator" target="_blank">Source Code</a>
+                            <a href="https://bcalal01.github.io/Portfolio/BusinessmanSimulator/" target="_blank">Play the Game</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="project">
+                        <h2>PixelDraw</h2>
+                        <img src="images/pixeldraw.jpg">
+                        <p>
+                            Website for creating 20 x 20 pixel art drawings. Major functionalities include drawing, erasing, and filling
+                            areas with color.
+                            <br>
+                            <br>
+                            HTML, CSS, JavaScript
+                        </p>
+                        <div class="buttons">
+                            <a href="https://github.com/bcalal01/Portfolio/tree/main/PixelDraw" target="_blank">Source Code</a>
+                            <a href="https://bcalal01.github.io/Portfolio/PixelDraw/pixeldraw.html" target="_blank">Visit the Website</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h2>Paci-Helios</h2>
+                        <img src="images/pacihelios.jpg">
+                        <p>
+                            2D top-down bullet hell game where you play as a spaceship forced to survive an onslaught
+                            of attacks from an army of AI drones. 
+                            <br>
+                            <br>
+                            Unity, C#
+                        </p>
+                        <div class="buttons">
+                            <a href="https://bcalal01.github.io/PaciHelios/" target="_blank">Visit the Website</a>
+                            <a href="https://friendlyfire-gamedesign.itch.io/paci-helios" target="_blank">Play the Game</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h2>Window Washing Warrior</h2>
+                        <img src="images/window.jpg">
+                        <p>
+                            2D platformer game where you play as a window washer, climbing to the tops of various
+                            high rises, cleaning windows and avoiding obstacles on your treacherous trek upwards.
+                            <br>
+                            <br>
+                            Unity C#
+                        </p>
+                        <div class="buttons">
+                            <a href="https://windowwasher67.itch.io/window-washing-warrior-v13" target="_blank">Play the Game</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
