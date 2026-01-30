@@ -114,12 +114,13 @@
         }
 
         #me {
-            display: none;
+            display: inline-block;
             border: solid 2px;
             width: 200px;
         }
 
         #offbutton {
+            display: none;
             all: unset;
             width: fit-content;
             margin: 20px;
@@ -130,6 +131,9 @@
             transition: all .2s;
             background-color: #ffffff;
         }
+
+        canvas {
+            display:none;
 
         #offbutton:hover {
             background-color: #bfdadd;
